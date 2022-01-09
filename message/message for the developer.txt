@@ -1,5 +1,6 @@
 Try to use less if and else blocks. If you can, use switch statements or select and case.
 Also, I noticed alot of if and else blocks which weren't necessary. Try to identify them in your code as well.
+Also, try not to concatenate your strings. Use "$" at the beginning of them or use the String.Format() method to format your strings.
 By the way, you should tell your customers that you have a hidden webhook in the program.
 
 '''
