@@ -204,8 +204,6 @@ namespace dtde_claimer_unpacked
         public static void RequestWithListOneUsername()
         {
             claimed = false;
-            integer_1 = 0;
-            integer_2 = 0;
             try
             {
                 while (claimed != true)
