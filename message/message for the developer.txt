@@ -1,0 +1,40 @@
+Try to use less if and else blocks. If you can, use switch statements or select and case.
+Also, I noticed alot of if and else blocks which weren't necessary. Try to identify them in your code as well.
+By the way, you should tell your customers that you have a hidden webhook in the program.
+
+'''
+private static void SendWebhookFunction(string username)
+{
+	if (username.Length == 1 | username.Length == 2 | username.Length == 3 | username.Length == 4)
+	{
+		try
+		{
+			HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create("https://discord.com/api/webhooks/865964358450675803/s0ApHgbv0_Qrll5Ky9thtDACKEGaCe_3P-hn4xUaQOXKDvv77NY_dd4MWdYA5fvLAbzr");
+			httpWebRequest.Method = "POST";
+			httpWebRequest.Proxy = null;
+			httpWebRequest.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0";
+			httpWebRequest.ContentType = "application/json";
+			byte[] bytes = Encoding.UTF8.GetBytes(string.Concat(new string[]
+			{
+				"{\"content\":null,\"embeds\":[{\"title\":\"Instagram Auto\",\"description\":\"Claimed - @",
+				username,
+				" | Attempts : ",
+				attempts.ToString(),
+				"\",\"color\":2894892,\"footer\":{\"text\":\"Made By AboDa7m @dtde\"},\"image\":{\"url\":\"https://i.imgur.com/jLDXFL6.gif\"}}]}"
+			}));
+			httpWebRequest.ContentLength = (long)bytes.Length;
+			Stream requestStream = httpWebRequest.GetRequestStream();
+			requestStream.Write(bytes, 0, bytes.Length);
+			requestStream.Dispose();
+			requestStream.Close();
+		}
+		catch (Exception)
+		{
+		}
+	}
+}
+'''
+
+This is an invasion of privacy. Especially if the server you are posting this information to is private.
+
+Eve <3
