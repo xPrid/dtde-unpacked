@@ -29,7 +29,7 @@ namespace dtde_claimer_unpacked
             Console.WriteLine("@DTDE Claimer Unpacked by Eve");
             Console.WriteLine("Nice Authentication:  https://pastebin.com/raw/2TkGGr5Z");
             System.Threading.Thread.Sleep(10000);
-            proxy_list = new System.Collections.Generic.List<string>(System.IO.File.ReadLines("proxies.text"));
+            proxy_list = new System.Collections.Generic.List<string>(System.IO.File.ReadLines("proxies.txt"));
             session_list = new System.Collections.Generic.List<string>(System.IO.File.ReadAllLines("sessions.txt"));
             list = new System.Collections.Generic.List<string>(System.IO.File.ReadAllLines("list.txt"));
             System.Threading.Thread.Sleep(5000);
